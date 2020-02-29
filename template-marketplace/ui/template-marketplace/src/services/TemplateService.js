@@ -18,6 +18,7 @@ class TemplateService{
                 this.templateList = response;
                 resolve();
             },()=>{
+                //reject
                 reject();
             })
         })

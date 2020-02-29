@@ -7,22 +7,25 @@ class TemplateViewer extends Component {
         super(props);
         this.state = {
             "currentTemplate":""
-        }
-        
+        }                
     }
+    
     componentWillMount(){
         // 0 item should be there , already handled at App Component
+
+        // Set the first item's active flag as true to set active template
+        TemplateService.templateList[0].active = true;
         // Get the Current Template to display when the page load
         this.setState({
-            "currentTemplate":TemplateService.templateList[0]
-        })             
+            "currentTemplate": TemplateService.templateList[0]
+        })                   
     }
     /**
      * receiveTemplateFromSlider
      * Selected template will be received from template slider component
      */
     receiveTemplateFromSlider=(template)=>{      
-        // Change the state  
+        // Change the state          
         this.setState({"currentTemplate":template}); 
     }
     /**
@@ -33,10 +36,10 @@ class TemplateViewer extends Component {
         return (
             <div>
                 <div id="main" role="main">
-                    <div id="large">
+                    <div id="large">                        
                         <div class="group">
                             <img src={`/assets/images/large/${this.state.currentTemplate.image}`} alt="Large Image" width="430" height="360" />
-                            <div class="details">
+                            <div class="details">                                                                                   
                                 <p><strong>Title</strong> {this.state.currentTemplate.title}</p>
                                 <p><strong>Description</strong> {this.state.currentTemplate.description}</p>
                                 <p><strong>Cost</strong> ${this.state.currentTemplate.cost}</p>

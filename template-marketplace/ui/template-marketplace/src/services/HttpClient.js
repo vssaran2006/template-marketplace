@@ -1,4 +1,8 @@
 export default class HttpClient{
+    /**
+     * get
+     * @param {*} url 
+     */
     get(url){
         return new Promise((resolve,reject)=>{
             let request = new XMLHttpRequest();

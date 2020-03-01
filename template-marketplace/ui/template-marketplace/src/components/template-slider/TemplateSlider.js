@@ -50,6 +50,7 @@ class TemplateSlider extends Component {
     }
     /**
      * movePrevious
+     * * Move the previous page navigation.
      */
     movePrevious = ()=>{            
         if(!this.state.previousButtonEnabled) return;

@@ -1,0 +1,15 @@
+{
+  "name": "template-backend",
+  "version": "1.0.0",
+  "description": "template marketplace backend",
+  "main": "template-marketplace-app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start":"PORT=4040 node template-marketplace-app"
+  },
+  "author": "Saravanan Selvaraj",
+  "license": "ISC",
+  "dependencies": {
+    "express": "^4.17.1"
+  }
+}

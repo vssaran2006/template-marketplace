@@ -10,12 +10,31 @@ export default class HttpClient{
             request.setRequestHeader("Content-Type","json");
             request.onload = function(){
                 // return as json object
-                resolve(JSON.parse(this.response));
+                if(this.status==200 && HttpClient.isValidJson(this.response)){
+                    resolve(JSON.parse(this.response));
+                }else{
+                    // reject if its not valid response
+                    reject()
+                }                                
             }
-            request.onerror = function(){                
-                reject();
+            request.onerror = function(err){                                  
+                reject(err);
             }
+            request.timeout = 20000;
             request.send();
         });
+    }
+    /**
+     * 
+     * @param {*} data - json data
+     * check if the json is valid one
+     */
+    static isValidJson(data){        
+        try {
+            JSON.parse(data);
+        } catch (e) {
+            return false;
+        }
+        return true;        
     }
 }

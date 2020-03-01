@@ -1,7 +1,6 @@
 import HttpClient from './HttpClient';
 import config from '../core/Config';
 class TemplateService{
-
     templateList=null;
     constructor(){
         this.httpclient= new HttpClient();

@@ -1,3 +1,6 @@
+/**
+ * custome http client to handle handle get and post call
+ */
 export default class HttpClient{
     /**
      * get
@@ -23,6 +26,12 @@ export default class HttpClient{
             request.timeout = 20000;
             request.send();
         });
+    }
+    /**
+     * TBD
+     */
+    post(){
+
     }
     /**
      * 

@@ -85,12 +85,14 @@ class TemplateSlider extends Component {
             <div class="container">
                 <div class="thumbnails">
                     <div class="group">
+                        {/* loop through all the array of item as per sliders per page */}
                         {this.state.currentPageTemplates.map((templateItem) => {                                
                             return  (<a href={'javascript:void'} key={templateItem.id} title={templateItem.title} class={`${templateItem.active ? 'active' : ''}`}  onClick={(e)=>{this.selectTemplate(templateItem,e)}}>
                             <img src={`/assets/images/thumbnails/${templateItem.thumbnail}`}  width="145" height="121" />
                             <span>{templateItem.id}</span>
                             </a>)                            
-                        })}                                                   
+                        })}    
+                        {/* handle next previous action and styles dynamically                                                */}
                         <a href={'javascript:void'} class={`previous ${!this.state.previousButtonEnabled ? 'disabled' : ''}`} title="Previous" onClick={()=>{this.movePrevious()}}>Previous</a>
                         <a href={'javascript:void'} class={`next ${!this.state.nextButtonEnabled ? 'disabled' : ''}`} title="Next" onClick={()=>{this.moveNext()}}>Next</a>
                     </div>

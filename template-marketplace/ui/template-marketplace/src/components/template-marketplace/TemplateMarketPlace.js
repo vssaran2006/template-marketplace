@@ -20,7 +20,7 @@ class TemplateMarketPlace extends Component {
    */
   initApp(){    
     TemplateService.getTemplates().then(()=>{      
-      // Promise success - if we have valid array set as success
+      // Promise success - if we have valid array. Set as success
       let loadStatus = "";
       loadStatus = TemplateService.templateList && TemplateService.templateList.length >0 ? "SUCCESS" : "FAILURE";
       this.setState({
@@ -46,6 +46,7 @@ class TemplateMarketPlace extends Component {
           {/* Handle Error scenario and Success and Loader until API done */}
            {this.state.LOAD_STATUS==="SUCCESS" ? <TemplateViewer/> : (this.state.LOAD_STATUS==="IN_PROGRESS") ? "Loading" : "Sorry, Please try after sometime"}
           <footer>
+            {/* to be decided the url */}
           <a href="instructions.pdf">Download PDF Instructions</a>
           </footer>
       </div>

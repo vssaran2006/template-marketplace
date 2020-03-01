@@ -12,7 +12,6 @@ class TemplateViewer extends Component {
     
     componentDidMount(){
         // 0 item should be there , already handled at App Component
-
         // Set the first item's active flag as true to set active template
         TemplateService.templateList[0].active = true;
         // Get the Current Template to display when the page load

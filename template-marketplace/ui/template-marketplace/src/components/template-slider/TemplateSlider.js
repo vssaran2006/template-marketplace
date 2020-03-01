@@ -1,6 +1,6 @@
 
 import React, { Component } from 'react';
-import TemplateService from '../services/TemplateService';
+import TemplateService from '../../services/TemplateService';
 
 class TemplateSlider extends Component {
 
@@ -85,8 +85,8 @@ class TemplateSlider extends Component {
                 <div class="thumbnails">
                     <div class="group">
                         {this.state.currentPageTemplates.map((templateItem) => {                                
-                            return  (<a href={'javascript:void'} title={templateItem.title} class={`${templateItem.active ? 'active' : ''}`}  onClick={(e)=>{this.selectTemplate(templateItem,e)}}>
-                            <img src={`/assets/images/thumbnails/${templateItem.thumbnail}`} alt="7111-m" width="145" height="121" />
+                            return  (<a href={'javascript:void'} key={templateItem.id} title={templateItem.title} class={`${templateItem.active ? 'active' : ''}`}  onClick={(e)=>{this.selectTemplate(templateItem,e)}}>
+                            <img src={`/assets/images/thumbnails/${templateItem.thumbnail}`}  width="145" height="121" />
                             <span>{templateItem.id}</span>
                             </a>)                            
                         })}                                                   

@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
-import TemplateSlider from '../components/TemplateSlider';
-import TemplateService from '../services/TemplateService';
+import TemplateSlider from '../template-slider/TemplateSlider';
+import TemplateService from '../../services/TemplateService';
 
 class TemplateViewer extends Component {
     constructor(props) {
@@ -10,7 +10,7 @@ class TemplateViewer extends Component {
         }                
     }
     
-    componentWillMount(){
+    componentDidMount(){
         // 0 item should be there , already handled at App Component
 
         // Set the first item's active flag as true to set active template
@@ -38,7 +38,7 @@ class TemplateViewer extends Component {
                 <div id="main" role="main">
                     <div id="large">                        
                         <div class="group">
-                            <img src={`/assets/images/large/${this.state.currentTemplate.image}`} alt="Large Image" width="430" height="360" />
+                            <img src={`/assets/images/large/${this.state.currentTemplate.image}`} width="430" height="360" />
                             <div class="details">                                                                                   
                                 <p><strong>Title</strong> {this.state.currentTemplate.title}</p>
                                 <p><strong>Description</strong> {this.state.currentTemplate.description}</p>

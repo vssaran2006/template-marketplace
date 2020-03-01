@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
-import TemplateViewer from './TemplateViewer';
-import TemplateService from '../services/TemplateService';
+import TemplateViewer from '../template-viewer/TemplateViewer';
+import TemplateService from '../../services/TemplateService';
 
 /**
  * Main Component - TemplateMarketPlace
@@ -19,7 +19,7 @@ class TemplateMarketPlace extends Component {
    * initApp
    */
   initApp(){    
-    TemplateService.getTemplates().then(()=>{
+    TemplateService.getTemplates().then(()=>{      
       // Promise success - if we have valid array set as success
       let loadStatus = "";
       loadStatus = TemplateService.templateList && TemplateService.templateList.length >0 ? "SUCCESS" : "FAILURE";
@@ -44,7 +44,7 @@ class TemplateMarketPlace extends Component {
             Template MarketPlace
           </header>
           {/* Handle Error scenario and Success and Loader until API done */}
-           {this.state.LOAD_STATUS=="SUCCESS" ? <TemplateViewer/> : (this.state.LOAD_STATUS==="IN_PROGRESS") ? "Loading" : "Sorry, Please try after sometime"}
+           {this.state.LOAD_STATUS==="SUCCESS" ? <TemplateViewer/> : (this.state.LOAD_STATUS==="IN_PROGRESS") ? "Loading" : "Sorry, Please try after sometime"}
           <footer>
           <a href="instructions.pdf">Download PDF Instructions</a>
           </footer>

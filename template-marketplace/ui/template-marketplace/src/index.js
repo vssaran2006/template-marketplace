@@ -1,7 +1,7 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 import './index.css';
-import TemplateMarketPlace from './components/TemplateMarketPlace';
+import TemplateMarketPlace from './components/template-marketplace/TemplateMarketPlace';
 import * as serviceWorker from './serviceWorker';
 
 ReactDOM.render(<TemplateMarketPlace />, document.getElementById('root'));

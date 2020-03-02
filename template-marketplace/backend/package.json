@@ -5,7 +5,7 @@
   "main": "template-marketplace-app.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "start":"PORT=4040 node template-marketplace-app"
+    "start": "PORT=4040 node template-marketplace-app"
   },
   "author": "Saravanan Selvaraj",
   "license": "ISC",

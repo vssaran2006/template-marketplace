@@ -7,7 +7,7 @@ Application Name - Template MarketPlace
 
 # Steps to Install Backend API & run the server #
 
-Go to template-marketplace/backend/template-marketplace from the Terminal and install packages by "npm install" or "npm i"
+Go to template-marketplace/backend from the Terminal and install packages by "npm install" or "npm i"
 
 Run the Server with the command - "npm start"
 

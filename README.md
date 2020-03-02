@@ -50,6 +50,6 @@ Go to template-marketplace/ui/template-marketplace from the Terminal
 
 Run the command - npm run build 
 
-Out of the box React would generate all the binaries into "template-marketplace/ui/template-marketplace/build"
+Out of the box React would generate all the binaries into "template-marketplace/ui/build"
 
-All the bundles would be available in static folder
+All the bundles would be available in static folder 

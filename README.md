@@ -27,7 +27,7 @@ Run the Server again with the command - "npm start"
 
 # Steps to Install ReactApp & run the server (Develop mode- Out of the box -ReactJs)#
 
-Go to template-marketplace/ui/template-marketplace from the Terminal and install packages by "npm install" or "npm i"
+Go to template-marketplace/ui from the Terminal and install packages by "npm install" or "npm i"
 
 Run the Server with the command - "npm start"
 

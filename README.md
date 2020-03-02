@@ -1,5 +1,7 @@
 # README #
 
+git clone https://github.com/vssaran2006/template-marketplace.git
+
 Application Name - Template MarketPlace
 
 

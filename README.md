@@ -29,6 +29,14 @@ Run the Server again with the command - "npm start"
 
 Go to template-marketplace/ui from the Terminal and install packages by "npm install" or "npm i"
 
+# Set the BackEnd Api Endpoint Url in the React App(!!!IMPORTANT!!!) #
+
+Go to template-marketplace/ui/src/core/Config.js file - Update the basePathUrl to the backend API's url where the express app is running.
+Ex- http://localhost:4040 or any endpoint . -- No slash required at the end just http://localhost:4040 is fine and build the app
+
+
+# Run the  React App #
+
 Run the Server with the command - "npm start"
 
 # Template Marketplace is Up & running #
